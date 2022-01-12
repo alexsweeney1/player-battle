@@ -7,7 +7,8 @@ feature 'Enter player names' do
     fill_in :playerone, with: 'Alex'
     fill_in :playertwo, with: 'Rosie'
     click_button 'Submit'
-    expect(page).to have_content 'Welcome Alex and Rosie to battleships!' 
+
+    expect(page).to have_content 'Welcome Alex and Rosie to battle!' 
     
   end
 end

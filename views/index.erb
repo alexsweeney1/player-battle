@@ -1,10 +1,14 @@
+<h1> Welcome to battle! </h1>
+<h3> Please enter your names!<h3>
 
-<h1>Welcome <%= @playerone %> and <%= @playertwo %> to battleships!</h1>
-
-
-
-<form action="/" method="post"> 
-  <input type="text" name="playerone">
-  <input type="text" name="playertwo">
+<form action="/names" method="post"> 
+  <label for='playerone'>
+    Player one name:
+    <input type="text" name="playerone">
+  </label>
+  <label for='Playertwo'>
+    Player two name:
+    <input type="text" name="playertwo">
+  </label>
   <input type="submit" value="Submit">
 </form>
