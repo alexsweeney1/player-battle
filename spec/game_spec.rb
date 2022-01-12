@@ -25,4 +25,33 @@ describe Game do
       expect(game.playertwo).to eq playertwo
     end
   end
+
+  describe '#current_turn' do
+    it 'returns player one' do
+      expect(game.current_player).to eq playerone
+    end
+
+    it 'returns player two after a turn' do
+      game.change_turn
+      expect(game.current_player).to eq playertwo
+    end
+  end
+
+  describe '#opponent' do
+    it 'returns player two' do
+      expect(game.opponent).to eq playertwo
+    end
+
+    it 'returns player one after a turn' do
+      game.change_turn
+      expect(game.opponent).to eq playerone
+    end
+  end
+
+  describe '#change_turn' do
+    it 'changes whos turn it is after an attack' do
+      game.change_turn
+      expect(game.current_player).to eq playertwo
+   end
+  end
 end
