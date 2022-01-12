@@ -23,11 +23,5 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'attacks another player' do
-      expect(aadam).to receive(:receive_damage)
-      alex.attack(aadam)
-    end
-  end
 end
 
